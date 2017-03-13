@@ -1,0 +1,246 @@
+body
+{
+  position:relative;
+  background-color: #28d2a7;
+}
+
+.randomBack
+{
+  width:100%;
+  height:75%;
+  text-align:center;
+  position:relative;
+}
+.subtitle
+{
+  color:#e7e7e9;
+  /*color:rgb(233, 118, 32);*/
+  font-size:0.6em;
+  clear:both;
+  display:inline-block;
+  /*display:block;
+  margin-top:1em;*/
+
+}
+#codeman
+{
+  position:absolute;
+  bottom:-3em;
+  right:80%;
+  width:10em;
+}
+#nextbtn
+{
+  position:absolute;
+  top:50%;
+  left:85%;
+  width:3em;
+}
+.nextpage
+{
+  background-color:yellow;
+  height:100%;
+  width:100%;
+  position:absolute;
+  z-index:5;
+  top:0;
+  left:-100%;
+  display:none;
+}
+.codewindow
+{
+  width:70%;
+  height:100%;
+  margin-left:auto;
+  margin-right:auto;
+  border:#ff0000 2px;
+}
+.codetop
+{
+  border-top-left-radius: 0.3em;
+  border-top-right-radius: 0.3em;
+  background-color:#dfdfdf;
+  min-height:2em;
+  height:8%;
+  width:100%;
+  padding:0.5em;
+}
+.codecontent
+{
+  border-bottom-left-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
+  background-color:#3d3d3d;
+  width:100%;
+  height:92%;
+  padding:0.5em;
+  font-family:courier;
+  line-height: 2;
+  text-align:left;
+}
+.greenText
+{
+  color:#02E880;
+}
+a.greenText:hover
+{
+  background-color:transparent;
+  color:#80FF80;
+}
+a.greenText:active
+{
+  color:#00FF00;
+}
+
+.circle {
+  width: 1em;
+  height: 1em;
+  -moz-border-radius: 0.5em;
+  -webkit-border-radius: 0.5em;
+  border-radius: 0.5em;
+  float:left;
+}
+#firstCircle
+{
+  background-color:#FB4847;
+}
+#secondCircle
+{
+  margin-left:10px;
+  background-color:#FDB321;
+}
+#thirdCircle
+{
+  margin-left:10px;
+  background-color:#2AC933;
+}
+#footer
+{
+  background-color:#3d3d3d;
+}
+.contentHolder
+{
+}
+@media only screen and (max-width: 991px) {
+    .contentHolder {
+        height:auto;
+        max-width:800px;
+    }
+    #signupForm {
+      margin-left: 8px;
+      padding:0;
+      margin-top:16px;
+      padding-bottom:16px;
+    }
+}
+.leftsideMain
+{
+  padding-left:24px;
+}
+.rightsideMain
+{
+  text-align:left;
+}
+.videowrapper
+{
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 */
+  padding-top: 25px;
+  height: 0;
+}
+.videowrapper iframe
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+#signupForm
+{
+  text-align:left;
+  font-family: "Quicksand";
+  font-weight: normal;
+  /*background-color: rgb(188,214,237);*/
+  color:#3d3d3d;
+  background-color: transparent;
+  border-radius: 6px;
+  height:100%;
+}
+#signupForm input
+{
+  margin-bottom: 16px;
+}
+
+#whyForm
+{
+  margin-bottom: 16px;
+  height:8em;
+}
+#thankyou
+{
+  display:block;
+  clear:both;
+}
+strong
+{
+  font-weight: 700;
+}
+#signupBtn
+{
+/*  background-color:rgb(253, 232, 92);
+  color:#3d3d3d;*/
+  background-color:rgb(233, 118, 32);
+  color:#e7e7e9;
+  width:50%;
+  margin-left:auto;
+  margin-right:auto;
+  font-weight:bold;
+  font-size:1.2em;
+
+}
+#signupBtn:hover
+{
+  color:#3d3d3d;
+}
+#signupBtn:active
+{
+  color:#202020;
+}
+.friends-logo
+{
+  height:100px;
+}
+#friendsof
+{
+  text-align:left;
+  margin-left:8px;
+  font-size:1.5em;
+  color:#e7e7e9;
+  /*color:#666;*/
+  font-family: "Quicksand";
+}
+.socialProof
+{
+  overflow-x: auto;
+}
+#logosBox
+{
+  min-width:861px;
+  padding-left:8px;
+  text-align:left;
+}
+.logo-group
+{
+  padding-right:50px;
+  float:left;
+  padding-left:0px;
+  text-align:center;
+
+}
+.logo-caption
+{
+  display:block;
+  clear:both;
+  font-size:0.8em;
+  color:#e7e7e9;
+}
