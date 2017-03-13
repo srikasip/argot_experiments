@@ -228,6 +228,7 @@ strong
   min-width:861px;
   padding-left:8px;
   text-align:left;
+  margin-top:16px;
 }
 .logo-group
 {
@@ -243,4 +244,5 @@ strong
   clear:both;
   font-size:0.8em;
   color:#e7e7e9;
+  font-family:"Quicksand";
 }
