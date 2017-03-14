@@ -2,6 +2,7 @@ body
 {
   position:relative;
   background-color: #28d2a7;
+  font-family:"Quicksand";
 }
 
 .randomBack
@@ -119,6 +120,7 @@ a.greenText:active
 }
 .contentHolder
 {
+  position:relative;
 }
 @media only screen and (max-width: 991px) {
     .contentHolder {
@@ -244,5 +246,24 @@ strong
   clear:both;
   font-size:0.8em;
   color:#e7e7e9;
-  font-family:"Quicksand";
+}
+#form-overlay
+{
+  position:absolute;
+  top:0;
+  left:0;
+  height:100%;
+  width:100%;
+  background-color:rgba(25,25,25,0.9);
+  z-index:99;
+  text-align:center;
+  padding-top:10%;
+  padding-left: 24px;
+  padding-right:24px;
+  display:none;
+}
+#waitUnicorn
+{
+  max-width:75%;
+  max-height:75%;
 }

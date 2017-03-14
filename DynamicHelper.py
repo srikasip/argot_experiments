@@ -44,7 +44,7 @@ class DynamicHelper:
       allSignups = json.load(signups)
     if len(allSignups) <= 0:
       allSignups = []
-    
+
     params["timestamp"] = str(datetime.now())
     allSignups.append(params);
     pprint(allSignups)

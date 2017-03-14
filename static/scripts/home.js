@@ -5,6 +5,10 @@ $(document).ready(function(){
 function SubmitClicked()
 {
   $("#signupBtn").prop("disabled",true);
+  $("#form-overlay").css("display", "block");
+
+
+
   email = $("#emailForm").val();
   name = $("#firstForm").val();
   reason = $("#whyForm").val();
@@ -14,19 +18,18 @@ function SubmitClicked()
     contentType: "application/json; charset=utf-8",
     data: JSON.stringify(dataSource),
     type: 'POST',
-
     success: function(response) {
-      console.log("SUCCESS");
       //console.log(response);
       //Do everything else after report-back to server is complete.
-      alert("thank you for signing up!");
       $("#signupBtn").prop("disabled",false);
+      $("#form-overlay").html("Thanks so much!<br /><br />To show our appreciation, as soon as we launch, you'll get Premium Access for 1 year!");
     },
     error: function(error) {
-      alert("Shit");
       console.log("ERROR");
       console.log(error);
       $("#signupBtn").prop("disabled",false);
+      $("#form-overlay").html("I'm so embarrassed.<br/><br/>It looks like something went wrong...");
+      $("#form-overlay").css("display", "none");
     }
   }); //Closing Ajax 
 }
