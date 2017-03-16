@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup as bs
 import json
 from pprint import pprint
 from datetime import datetime
+import requests
 
 class DynamicHelper:
   def __init__(self):
@@ -10,24 +11,6 @@ class DynamicHelper:
   @staticmethod
   def GetDynamicContent(mainPath):
     if mainPath == "canvas":
-      # with open('static/canvas/template.html') as mainCanvas:
-      #   templateSoup = bs(mainCanvas.read())
-      # templateBlocks = templateSoup.find_all("template")
-      
-      # for block in templateBlocks:
-      #   pageURL = block.get_text()
-      #   with open('static/canvas/'+pageURL) as blockPage:
-      #     pageSoup = bs(blockPage.read())
-        
-      #   block.parent.append(pageSoup.find("body"))
-      #   block.parent.find("body").unwrap()
-      #   block.decompose()
-
-      #   mainHead = templateSoup.find("head")
-      #   mainHead.append(pageSoup.find("head"))
-      #   mainHead.find("head").unwrap()
-
-      #data = str(templateSoup.prettify())
       data = "<html><head></head><body>This page is not real</body></html>"
       content_type = "text/html"
 
@@ -36,23 +19,28 @@ class DynamicHelper:
         data = myHome.read()
       content_type = "text/html"
 
+    
     return data, content_type
 
   @staticmethod
   def GetPassBackContent(mainPath, params):
-    with open("signups.json", "r") as signups:
-      allSignups = json.load(signups)
-    if len(allSignups) <= 0:
-      allSignups = []
 
-    params["timestamp"] = str(datetime.now())
-    allSignups.append(params);
-    pprint(allSignups)
+    params["SignupTimeStamps"] = str(datetime.now())
+    params["UseCase"] = "Data Science"
+    
+    payload = json.dumps({'fields': params, 'typecast': True})
 
-    with open("signups.json", "w") as signupsWrite:
-      json.dump(allSignups, signupsWrite, indent=2, sort_keys = True)
+    url = "https://api.airtable.com/v0/appxXV1DjwHXfzuSL/ArgotSignupsTracker/"
+    header = {"Authorization": "Bearer keyqXy9wVseyd2L6S", "Content-type":"application/json"}
+    
+    r = requests.post(url, data=payload, headers=header, params=None)
 
-    data = '{"status":"Success"}'
+    if r.status_code == requests.codes.ok:
+      print "Success!"
+      data = '{"status":"Success"}'
+    else:
+      print "Failed"
+      data = '{"status":"Failed"}'
+
     content_type = "application/json"
-
     return data, content_type
