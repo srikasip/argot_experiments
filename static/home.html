@@ -1,68 +1,155 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Argot</title>
-    <meta name="description" content="You make your product. Let robots do the rest">
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="//cdn.getkickstart.com/css/kickstart.min.css" />
-    <script type="text/javascript" src="//cdn.getkickstart.com/js/kickstart.min.js"></script>
+    <title>Argot</title>
 
-    <link rel="stylesheet" href="static/css/main.css">
-    <link rel="stylesheet" href="static/css/home.css">
-    <link href="https://fonts.googleapis.com/css?family=Quicksand|Droid+Serif" rel="stylesheet">
-
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--  Optional theme
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> 
+    -->
+    <!-- Latest compiled and minified JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="static/scripts/typed.js" type="application/javascript"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="static/scripts/home.js" type="application/javascript"></script>
 
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|Droid+Serif" rel="stylesheet">
+
+    <link rel="stylesheet" href="static/css/main.css">
+    <link rel="stylesheet" href="static/css/home2.css">
+
     <link rel="icon" href="static/images/favicon.ico" type="image/x-icon" />
+
+    <script>
+      // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      // })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      // ga('create', 'UA-93850237-1', 'auto');
+      // ga('send', 'pageview');
+    </script>
   </head>
 
   <body>
-    <img src="static/images/robot.png" id="codeman"/>
-    <!-- <div id="header">
-      <a href="home.html" class="logo">Argot App Builder</a>
-      <div class="links">
-        <a>Home</a>
-        <a>Login</a>
-        <a>Sign Up</a>
-      </div>
-    </div> -->
-
-    <div class="navbar">
-      <nav>
-        <ul>
-          <li><a href="home.html" class="logo">Argot App Builder</a></li>
-        </ul>
-        <ul>
-          <li>Home</li>
-          <li>Login</li>
-          <li>Signup</li>
-        </ul>
-      </nav>
-    </div>
-
-    <div id="mainContent">
-      <div class="codewindow">
-        <div class="codetop">
-          <div id="firstCircle" class="circle"></div>
-          <div id="secondCircle" class="circle"></div>
-          <div id="thirdCircle" class="circle"></div>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <a class="navbar-brand logo" href="#">Argot <span class="subtitle">Data Science</span></a>
         </div>
-        <div class="codecontent greenText">
-          <div class="type-wrap">
-            <div id="typed-strings">
-              <span>Hi! I'm <strong>Margot</strong>, your personal programmer.<br/>I'm here to help you make your awesome tech idea real.<br/>Let's work together and start making!<br/><br/><a class="greenText" href="javascript:newPage_func()"><strong>Get Started.</strong></a></span>
+      </div><!-- /.container-fluid -->
+    </nav>
+    <div class="block topBlock">
+      <div class="leftsideMain">
+        <div class="videowrapper">
+          <iframe src="https://player.vimeo.com/video/207797267" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
+      </div>
+      <div class="rightsideMain contentHolder">
+        <div id="form-overlay">
+          <img id="waitUnicorn" src="static/images/unicornWait.gif" alt="We are workin on it" />
+          <br />
+          Thanks for holding on a second. We are working on it...
+        </div>        
+        <form id="signupForm">
+          <label for="emailForm">Email Address:</label>
+          <input id="emailForm" type="text" class="form-control" />
+          <label for="firstForm">First Name:</label>
+          <input id="firstForm" type="text" class="form-control"/>
+          <label for="whyForm">How would you use Argot?</label>
+          <textarea id="whyForm" type="text" class="form-control"></textarea>
+          <button type="button" class="btn" id="signupBtn">Sign Up!</button>
+        </form>
+      </div>
+    </div>
+    <div class="block orangeBack">
+        <h2 class="blockHeading">Friends of Argot</h2>
+        <div class="horiz-scroller">
+          <div id="logosBox">
+            <div class="logo-group">
+              <img class="friends-logo" src="static/images/yale_som_gray.png" alt="Yale School of Management" />
+              <span class="logo-caption">Yale SOM</span>
             </div>
-            <span id="typed" style="white-space:pre;"></span>
+            <div class="logo-group">
+              <img class="friends-logo" src="static/images/brown_ai_lab_gray.png" alt="Brown Robotics Lab" />
+              <span class="logo-caption">Brown AI Lab</span>
+            </div>
+            <div class="logo-group">
+              <img class="friends-logo" src="static/images/yale_university_gray.png" alt="Yale University" />
+              <span class="logo-caption">Yale Data Science</span>
+            </div>
+            <div class="logo-group">
+              <img class="friends-logo" src="static/images/the_grove_gray.png" alt="The Grove New Haven" />
+              <span class="logo-caption">The Grove New Haven</span>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="block purpleBack">
+      <h2 class="blockHeading">The Team</h2>
+      <div class="horiz-scroller">
+        <div class="teamer-box">
+          <div class="teamer-group">
+            <img class="teamer" src="static/images/srikar_profile.jpg" alt="Srikar Prasad" />
+            <span class="teamer-caption teamer-name">Srikar</span>
+            <span class="teamer-caption">Founder</span>
+            <span class="teamer-caption">X-Google PM</span>
+            <span class="teamer-caption">Coder/Data Nerd</span>
+          </div>
+          <div class="teamer-group">
+            <img class="teamer" src="static/images/stefie_profile.jpg" alt="Stefanie Tellex" />
+            <span class="teamer-caption teamer-name">Stefie</span>
+            <span class="teamer-caption">Advisor</span>
+            <span class="teamer-caption">Brown Professor</span>
+            <span class="teamer-caption">Genius</span>
+          </div>
+          <div class="teamer-group">
+            <img class="teamer" src="static/images/sean_profile.jpeg" alt="Sean Shadmand" />
+            <span class="teamer-caption teamer-name">Sean</span>
+            <span class="teamer-caption">Advisor</span>
+            <span class="teamer-caption">Coder/Enrepreneur</span>
+            <span class="teamer-caption">Builder</span>
+          </div>
+          <div class="teamer-group">
+            <img class="teamer" src="static/images/elon_profile.jpg" alt="Elon Boms" />
+            <span class="teamer-caption teamer-name">Elon</span>
+            <span class="teamer-caption">Advisor</span>
+            <span class="teamer-caption">Venture Capitalist</span>
+            <span class="teamer-caption">Dreamer</span>
           </div>
         </div>
       </div>
-      <a class="nextpage_link"><img src="static/images/next-btn.png" id="nextbtn"/></a>
     </div>
-    <div class="nextpage"></div>
+    <div class="block redBack">
+      <h2 class="blockHeading">The Dream</h2>
+      <p>
+        What does programming 2.0 look like?
+        What if building a full stack application were as easy as making a powerpoint presentation?
+        What if writing code were not a barrier to innovation or data-driven insights? What kind of a world would we live in? 
+        <br /><br />
+        Argot is trying to find out.  We want to build a natural language interpreter to convert
+        written instructions to structured, sensible, code. 
+
+        We are starting with data science, our passion, and the heart of product development. 
+        <br /><br />
+        Let's make something awesome, together.
+      </p>
+    </div>
+    <div class="block blackBack lastBlock footer">
+      <h2 class="blockHeading">The Footer</h2>
+      <span>195 Church St., Suite 1700</span>
+      <span>New Haven, CT 06510</span>
+      <br />
+      <span>Feel free to contact me:</span>
+      <span>Twitter: @srikasip</span>
+      <span>Email: srikasip@gmail.com</span>
+      <span class="copyright">&copy; Argot, Inc 2017</span>
+    </div>
   </body>
 </html>
+
