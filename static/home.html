@@ -20,6 +20,7 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://player.vimeo.com/api/player.js"></script>
     <script src="static/scripts/home.js" type="application/javascript"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Quicksand|Droid+Serif" rel="stylesheet">
@@ -41,11 +42,26 @@
   </head>
 
   <body>
+    <div id="downarrow"><span class="glyphicon glyphicon-circle-arrow-down"></span></div>
     <nav class="navbar navbar-default">
       <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
           <a class="navbar-brand logo" href="#">Argot <span class="subtitle">Data Science</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#signupForm">Signup</a></li>
+            <li><a href="#friends">Friends</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#dream">Dream</a></li>
+          </ul>
         </div>
       </div><!-- /.container-fluid -->
     </nav>
@@ -73,7 +89,7 @@
       </div>
     </div>
     <div class="block orangeBack">
-        <h2 class="blockHeading">Friends of Argot</h2>
+        <h2 class="blockHeading" id="friends">Friends of Argot</h2>
         <div class="horiz-scroller">
           <div id="logosBox">
             <div class="logo-group">
@@ -95,8 +111,8 @@
           </div>
       </div>
     </div>
-    <div class="block purpleBack">
-      <h2 class="blockHeading">The Team</h2>
+    <div class="block purpleBack" id="team-block">
+      <h2 class="blockHeading" id="team">The Team</h2>
       <div class="horiz-scroller">
         <div class="teamer-box">
           <div class="teamer-group">
@@ -105,6 +121,20 @@
             <span class="teamer-caption">Founder</span>
             <span class="teamer-caption">X-Google PM</span>
             <span class="teamer-caption">Coder/Data Nerd</span>
+            <div class="teamer-writeup">
+              <p>
+                <b>Srikar Prasad</b> is the founder of Argot.
+                <br /><br />
+                After working for 2.5 years as a Product Manager at Google, Srikar quit his job 
+                to make coding more accessible to everyone.
+                <br /><br />
+                Before this, Srikar did his MBA at Yale SOM, was the eng-lead
+                for a healthcare startup, and studied Math at the University of Pennsylvania. 
+                <br /><br />
+                When he's not coding, Srikar loves playing music, historical fiction, tinkering, 
+                and loudly singing out of ear-shot.
+              </p>
+            </div>
           </div>
           <div class="teamer-group">
             <img class="teamer" src="static/images/stefie_profile.jpg" alt="Stefanie Tellex" />
@@ -112,6 +142,19 @@
             <span class="teamer-caption">Advisor</span>
             <span class="teamer-caption">Brown Professor</span>
             <span class="teamer-caption">Genius</span>
+            <div class="teamer-writeup">
+              <p>
+                <b>Stefanie Tellex</b> is Argot's tech advisor.
+                <br /><br />
+                Stefanie did her PhD at MIT's Media Lab, and is currently 
+                an assistant professor of Computer Science at Brown University 
+                <br /><br />
+                Stefanie's research focuses on robot-human interactions. She has done 
+                ground-breaking work on robot understanding of human-given instructions.
+                <br /><br />
+                Stefanie trains machines, students, and cats.
+              </p>
+            </div>
           </div>
           <div class="teamer-group">
             <img class="teamer" src="static/images/sean_profile.jpeg" alt="Sean Shadmand" />
@@ -119,6 +162,17 @@
             <span class="teamer-caption">Advisor</span>
             <span class="teamer-caption">Coder/Enrepreneur</span>
             <span class="teamer-caption">Builder</span>
+            <div class="teamer-writeup">
+              <p>
+                <b>Sean Shadmand</b> is Argot's startup advisor.
+                <br /><br />
+                Sean is a serial entrepreneur and startup advisor. He was the founder and CEO of 
+                Socialize and AppMakr as well as a half dozen other startups that had a successful exit.
+                <br /><br />
+                In addition to his own startups, Sean is a thought-leader in entrepreneurship and a 
+                mentor to dozens of aspiring entrepreneurs.
+              </p>
+            </div>
           </div>
           <div class="teamer-group">
             <img class="teamer" src="static/images/elon_profile.jpg" alt="Elon Boms" />
@@ -126,12 +180,23 @@
             <span class="teamer-caption">Advisor</span>
             <span class="teamer-caption">Venture Capitalist</span>
             <span class="teamer-caption">Dreamer</span>
+            <div class="teamer-writeup">
+              <p>
+                <b>Elon Boms</b> is Argot's funding advisor.
+                <br /><br />
+                An entrepreneur himself, Elon founded LaunchCapital, a VC with offices in New Haven, 
+                New York, Boston, and San Francisco.
+                <br /><br />
+                Elon is a fellow SOM alumn and is deeply involved in the Elm City community. 
+                He is also a generous mentor to young entrepreneurs and an avid traveler.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div class="block redBack">
-      <h2 class="blockHeading">The Dream</h2>
+      <h2 class="blockHeading" id="dream">The Dream</h2>
       <p>
         What does programming 2.0 look like?
         What if building a full stack application were as easy as making a powerpoint presentation?
@@ -147,13 +212,19 @@
     </div>
     <div class="block blackBack lastBlock footer">
       <h2 class="blockHeading">The Footer</h2>
-      <span>195 Church St., Suite 1700</span>
-      <span>New Haven, CT 06510</span>
-      <br />
-      <span>Feel free to contact me:</span>
-      <span>Twitter: @srikasip</span>
-      <span>Email: srikasip@gmail.com</span>
-      <span class="copyright">&copy; Argot, Inc 2017</span>
+      <div class="address clearfix">
+        <span>195 Church St.</span>
+        <span>Suite 1700</span>
+        <span>New Haven, CT 06510</span>
+      </div>
+      
+      <div class="contact clearfix">
+        <span>Feel free to contact us:</span>
+        <span>Twitter: @srikasip</span>
+        <span>Email: srikasip@gmail.com</span>
+      </div>
+      
+      <div class="copyright clearfix">&copy; Argot, Inc 2017</div>
     </div>
   </body>
 </html>
