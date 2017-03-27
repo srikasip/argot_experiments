@@ -22,7 +22,22 @@ $(document).ready(function(){
   $(window).scroll(function () { CheckScroller(); } );
   $(window).resize(function() { CheckScroller(); } );
 
+  SmoothScrollLinks()
+  
 });
+
+function SmoothScrollLinks()
+{
+  $('a[href^="#"]').on('click', function(event) {
+    var target = $(this.getAttribute('href'));
+    if(target.length) {
+        event.preventDefault();
+        $('html, body').stop().animate({
+            scrollTop: target.offset().top
+        }, 1000);
+      }
+  });
+}
 
 function CheckScroller()
 {
